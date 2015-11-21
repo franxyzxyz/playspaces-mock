@@ -1,0 +1,45 @@
+<header>
+
+</header>
+<script>
+  $(function(){
+    $("#searcharea").on('keypress',function(e){
+      if (e.which == 13){
+        console.log($(this).val())
+        $("#tagcontainer").prepend("<span class='tag' id='new'>" + $(this).val() + "</span>");
+        $(this).val("")
+        var new_width = $("#new").css("width")
+        console.log(new_width)
+        $("#searcharea").css("width", "158")
+        $("#searcharea").attr("placeholder","")
+      }
+    })
+
+    function makeTag(target){
+
+    }
+  })
+</script>
+<div class="col-sm-4">
+<div class="display">
+  <!-- <h1>search</h1> -->
+    <div class="container">
+      <div class="screen">
+<!--         <div>
+          <a href="/">HOME</a>
+          <a href="/search">search</a>
+          <a href="/user/pip-johnstone">login</a>
+          <a href="/location/hong-kong-park">HONG KONG PARK</a>
+        </div> -->
+        <div id="tagcontainer">
+          <i class="icon ion-search"></i>
+          <input type="text" id="searcharea" placeholder="Search for Playspaces">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="col-sm-8 slide-side">
+  <h1>SLIDE</h1>
+</div>

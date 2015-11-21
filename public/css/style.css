@@ -1,0 +1,46 @@
+body{
+  font-family:'Open Sans', sans-serif;
+}
+.slide-side{
+  background:red;
+  height:auto;
+}
+.display{
+  height:667px;
+  width:370px;
+  margin:0px auto;
+  background:url('../img/iphone.png') no-repeat center;
+}
+.rating{
+  background:orange;
+  padding:5px;
+  border-radius:3px;
+  color:white;
+}
+#tagcontainer{
+  width:300px;
+  display:inline;
+  border:2px solid gray;
+  border-radius:5px;
+  padding:6px;
+  font-size:16px;
+  /*background:rgba(255,255,255,0.6);*/
+}
+#searcharea{
+  border:0px;
+  background:transparent;
+  width:240px;
+}
+.tag{
+  background:red;
+  border-radius:5px;
+  padding:3px;
+}
+.screen{
+  /*background:rgba(100,85,120,0.7);*/
+  margin:83px 30px;
+  width:280px;
+  height:498px;
+  /*padding:10px;*/
+  padding-top:10px;
+}

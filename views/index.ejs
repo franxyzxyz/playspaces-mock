@@ -1,0 +1,39 @@
+<div class="col-sm-4">
+<div class="display">
+  <!-- <h1>search</h1> -->
+    <div class="container">
+      <div class="screen">
+              <div id="tagcontainer">
+                <i class="icon ion-search"></i>
+                <input type="text" id="searcharea" placeholder="Search for Playspaces">
+              </div>
+        <h3>TOP PLAYSPACE NEAR YOU</h3>
+            <div class="list-box" style="background:url('../img/hongkongpark.jpg');height:150px;padding:10px">
+            </div>
+
+        <ul class="list-unstyled">
+<!--               <div class="col-sm-10">
+                <b style="background:rgba(255,255,255,0.5);font-size:30px;padding:5px">1</b>
+              </div>
+              <div class="col-sm-2">
+                <span class="rating">4.5</span>
+              </div>
+              <div class="col-sm-12">
+                <p style="font-size:20px"><b>Hong Kong Park</b></p>
+-->
+<!-- </div> -->
+          <% seedLocation.forEach(function(location){ %>
+          <li>
+            <span><%- location.name.toUpperCase() %></span>
+            <span class="rating"><%- location.rating %></span>
+          </li>
+           <% }) %>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="col-sm-8 slide-side">
+  <h1>SLIDE</h1>
+</div>
