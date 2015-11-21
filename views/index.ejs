@@ -1,38 +1,95 @@
+<script>
+  $(function(){
+    $("#hov-list").hide()
+    $("#searcharea").on('keypress',function(e){
+      if (e.which == 13){
+        console.log($(this).val())
+        $("#tagcontainer").prepend("<span class='tag' id='new'>" + $(this).val() + "   <i class='icon ion-backspace'></i></span>");
+        $(this).val("")
+        var new_width = $("#new").css("width")
+        console.log(new_width)
+        $("#searcharea").css("width", "111")
+        $("#searcharea").attr("placeholder","")
+      }
+    });
+    $("#searcharea").on('focus',function(e){
+      $("#hov-list").show()
+    });
+
+    $("#link-heart").hover(function(){
+      $(this).removeClass('ion-ios-heart-outline')
+      $(this).addClass('ion-ios-heart')
+    })
+    $("#link-heart").on('mouseleave',function(){
+      if ($(this).hasClass('clicked-link')){
+      }else{
+        $(this).removeClass('ion-ios-heart')
+        $(this).addClass('ion-ios-heart-outline')
+      }
+    })
+    $("#link-heart").on('click',function(){
+      $(this).addClass('ion-ios-heart clicked-link')
+      $(this).css('color','red')
+    })
+    function makeTag(target){
+
+    }
+  })
+</script>
 <div class="col-sm-4">
 <div class="display">
-  <!-- <h1>search</h1> -->
     <div class="container">
       <div class="screen">
-              <div id="tagcontainer">
-                <i class="icon ion-search"></i>
-                <input type="text" id="searcharea" placeholder="Search for Playspaces">
-              </div>
-        <h3>TOP PLAYSPACE NEAR YOU</h3>
-            <div class="list-box" style="background:url('../img/hongkongpark.jpg');height:150px;padding:10px">
-            </div>
+        <p style="font-size:25px" class="text-center title">PlaySpace</p>
+        <div id="tagcontainer" style="height:50px">
+            <input type="text" id="searcharea" placeholder="Search for Playspaces">
+            <a class="icon ion-search" href="/search"></a>
+        </div>
+     <!--    <div style="position:absolute;top:180px;left:105px;background:rgba(255,255,255,0.9);width:268px;border:0px solid #ccc;z-index:2" id="hov-list">
+          <table class="table table-hover">
+            <tr>
+              <td>MakerBay</td>
+            </tr>
+            <tr>
+              <td>Maker</td>
+            </tr>
+            <tr>
+              <td></td>
+            </tr>
+          </table>
+        </div> -->
+        <div class="list-box" style="background:url('../img/hongkongpark.jpg') center;height:170px;padding:15px 0px;margin-top:20px">
+          <div class="col-sm-5">
+            <b style="background:rgba(255,255,255,0.7);font-size:30px;padding:5px 15px;border-radius:30px;" class="icon ion-trophy"></b>
+          </div>
+          <div class="col-sm-7 text-right">
+            <!-- <span class="rating">4.5</span> -->
+            <span><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star-half"></i></span>
+            <br/>
+            <span class="icon ion-ios-heart-outline text-right" style="font-size:30px;color:white" id="link-heart"> </span>
+          </div>
+          <div class="col-sm-12" style="margin-top:0px">
+            <p style="font-size:25px;text-shadow: 0 0 0.2em #fff, 0 0 0.2em #fff"><b>Hong Kong Park</b></p>
+          </div>
+          <div class="col-sm-12">
+            <a style="font-size:15px;" class="location-tag" href="/location/hong-kong-park"><i class="icon ion-ios-location-outline"></i> Central</a>
+          </div>
+        </div>
+        <p style="padding:0px 10px; margin-left:5px;margin-top:10px; font-size:20px;color:rgba(100,50,80,0.8)"><b><i class="icon ion-ios-location"></i>    Near You...</b></p>
+        <ul>
 
-        <ul class="list-unstyled">
-<!--               <div class="col-sm-10">
-                <b style="background:rgba(255,255,255,0.5);font-size:30px;padding:5px">1</b>
-              </div>
-              <div class="col-sm-2">
-                <span class="rating">4.5</span>
-              </div>
-              <div class="col-sm-12">
-                <p style="font-size:20px"><b>Hong Kong Park</b></p>
--->
-<!-- </div> -->
-          <% seedLocation.forEach(function(location){ %>
-          <li>
-            <span><%- location.name.toUpperCase() %></span>
-            <span class="rating"><%- location.rating %></span>
-          </li>
-           <% }) %>
+        <% seedLocation.forEach(function(elem){ %>
+        <li><%- elem.name %></li>
+         <% }) %>
         </ul>
       </div>
+      <div class="nav-bar">
+        <a href="/" class="icon ion-ios-home" style="font-size:40px;margin:0px 20px 0px 0px"></a>
+        <a class="icon ion-heart" style="font-size:40px;margin:0px 20px 0px 0px" href="/user/pip"></a>
+      </div>
+
     </div>
   </div>
-
 </div>
 <div class="col-sm-8 slide-side">
   <h1>SLIDE</h1>

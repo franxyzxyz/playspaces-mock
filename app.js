@@ -96,12 +96,14 @@ var seedLocation = [
 app.get('/',function(req,res){
   res.render('index',{seedLocation})
 })
-
-app.get('/location/hong-kong-park',function(req,res){
+app.get('/keyword',function(req,res){
+  res.render('keyword',{seedLocation})
+})
+app.get('/location/makerbay',function(req,res){
   res.render('location')
 })
 
-app.get('/user/pip-johnstone',function(req,res){
+app.get('/user/pip',function(req,res){
   res.render('user')
 })
 

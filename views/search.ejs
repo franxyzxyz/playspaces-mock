@@ -1,19 +1,53 @@
-<header>
-
-</header>
 <script>
   $(function(){
+    $("#hov-list").hide()
     $("#searcharea").on('keypress',function(e){
       if (e.which == 13){
         console.log($(this).val())
-        $("#tagcontainer").prepend("<span class='tag' id='new'>" + $(this).val() + "</span>");
+        $("#tagcontainer").prepend("<span class='tag' id='new'>" + $(this).val() + "   <i class='icon ion-backspace'></i></span>");
         $(this).val("")
         var new_width = $("#new").css("width")
         console.log(new_width)
-        $("#searcharea").css("width", "158")
+        $("#searcharea").css("width", "111")
         $("#searcharea").attr("placeholder","")
       }
+    });
+    $("#searcharea").on('focus',function(e){
+      $("#hov-list").show()
+    });
+
+    $("#link-heart").hover(function(){
+      $(this).removeClass('ion-ios-heart-outline')
+      $(this).addClass('ion-ios-heart')
     })
+    $("#link-heart").on('mouseleave',function(){
+      if ($(this).hasClass('clicked-link')){
+      }else{
+        $(this).removeClass('ion-ios-heart')
+        $(this).addClass('ion-ios-heart-outline')
+      }
+    })
+    $("#link-heart").on('click',function(){
+      $(this).addClass('ion-ios-heart clicked-link')
+      $(this).css('color','red')
+    })
+
+    $("#link-bookmark").hover(function(){
+      $(this).removeClass('ion-ios-bookmarks-outline')
+      $(this).addClass('ion-ios-bookmarks')
+    })
+    $("#link-bookmark").on('mouseleave',function(){
+      if ($(this).hasClass('clicked-link')){
+      }else{
+        $(this).removeClass('ion-ios-bookmarks')
+        $(this).addClass('ion-ios-bookmarks-outline')
+      }
+    })
+     $("#link-bookmark").on('click',function(){
+      $(this).addClass('ion-ios-bookmarks clicked-link')
+      $(this).css('color','orange')
+    })
+
 
     function makeTag(target){
 
@@ -22,23 +56,103 @@
 </script>
 <div class="col-sm-4">
 <div class="display">
-  <!-- <h1>search</h1> -->
     <div class="container">
       <div class="screen">
-<!--         <div>
-          <a href="/">HOME</a>
-          <a href="/search">search</a>
-          <a href="/user/pip-johnstone">login</a>
-          <a href="/location/hong-kong-park">HONG KONG PARK</a>
-        </div> -->
-        <div id="tagcontainer">
-          <i class="icon ion-search"></i>
-          <input type="text" id="searcharea" placeholder="Search for Playspaces">
+      <!-- TOP-SEARCH -->
+        <p style="font-size:25px" class="text-center title">PlaySpace</p>
+        <div id="tagcontainer" style="height:50px">
+            <input type="text" id="searcharea" placeholder="Search for Playspaces">
+            <a class="icon ion-search" href="/search"></a>
+        </div>
+        <!-- CONTENT -->
+        <div class="list-box" style="margin-top:20px">
+        <div class="col-sm-5">
+            <p style="font-size:20px"><b>MakerBay</b></p>
+        </div>
+        <div class="col-sm-7 text-right">
+          <span class="icon ion-ios-heart-outline text-right" style="font-size:30px;color:black" id="link-heart"></span>
+          <span class="icon ion-ios-bookmarks-outline text-right" style="font-size:30px;color:black" id="link-bookmark"></span>
+
+
+        </div>
+          <div class="col-sm-6">
+            <span class="icon ion-settings" style="font-size:20px"></span>
+            <span style="padding:2px; background:#666666;color:white;border-radius:5px"><b>5-12</b></span>
+            <div class="info">
+                <span><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i></span>
+                <br/><span><i class="icon ion-ios-telephone"></i>      8192 8167</span>
+                <br/><a href="#">5 reviews</a>
+            </div>
+
+          </div>
+          <div class="col-sm-6">
+            <img src="../img/map.png" class="img-thumbnail" alt="">
+          </div>
+          <div class="col-sm-12">
+          <i class="icon ion-ios-location"></i>
+            <a style="font-size:12px;cursor:pointer">
+            Yau Tong Industrial Building Block 2, <br/>Sze Shan St, Yau Tong</a>
+          </div>
+        </div>
+        <div class="col-sm-12" style="background:#cccccc;padding-top:3px;margin-top:10px">
+          <b>People also like...</b>
+        </div>
+        <div class="col-sm-12" style="height:85px;overflow-x:auto;white-space: nowrap;background:#cccccc">
+           <div class="scroll-box text-center" style="height:75px;width:80px;line-height:80%;display:inline-block;background:rgba(255,255,255,0.5);border-radius:3px">
+             <div class="col-sm-12">
+               <i class="icon ion-settings" style="font-size:40px"></i>
+             </div>
+             <div class="col-sm-12">
+               <span style="font-size:12px;">General <br/>Assembly</span>
+             </div>
+           </div>
+           <div class="scroll-box text-center" style="height:75px;width:70px;line-height:80%;display:inline-block;background:rgba(255,255,255,0.5);border-radius:3px">
+             <div class="col-sm-12">
+               <i class="icon ion-ios-football" style="font-size:40px"></i>
+             </div>
+             <div class="col-sm-12">
+               <span style="font-size:12px;">Chelsea<br/>FootBall</span>
+             </div>
+           </div>
+           <div class="scroll-box text-center" style="height:75px;width:70px;line-height:80%;display:inline-block;background:rgba(255,255,255,0.5);border-radius:3px">
+             <div class="col-sm-12">
+               <i class="icon ion-ios-football" style="font-size:40px"></i>
+             </div>
+             <div class="col-sm-12">
+               <span style="font-size:12px;">Chelsea<br/>FootBall</span>
+             </div>
+           </div>
+           <div class="scroll-box text-center" style="height:75px;width:70px;line-height:80%;display:inline-block;background:rgba(255,255,255,0.5);border-radius:3px">
+             <div class="col-sm-12">
+               <i class="icon ion-ios-football" style="font-size:40px"></i>
+             </div>
+             <div class="col-sm-12">
+               <span style="font-size:12px;">Chelsea<br/>FootBall</span>
+             </div>
+           </div>
+        </div>
+
+        <div class="col-sm-12" style="margin-top:20px;line-height:130%">
+          <div class="col-sm-4" style="display:inline">
+            <span><b>Reivews</b></span>
+          </div>
+          <div class="col-sm-8 text-right">
+            <a href="#" style="border:2px solid #cccccc;padding:0px 5px;background:#cccccc">ADD REVIEWS</a><br/>
+          </div>
+          <pre><a href="#">@grub2801</a>  <span><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star-outline"></i></span>
+          <br/> >> awesome place
+          </pre>
         </div>
       </div>
+
+      <!-- NAVBAR -->
+      <div class="nav-bar">
+        <a href="/" class="icon ion-ios-home" style="font-size:40px;margin:0px 20px 0px 0px"></a>
+        <a class="icon ion-heart" style="font-size:40px;margin:0px 20px 0px 0px" href="/user/pip"></a>
+      </div>
+
     </div>
   </div>
-
 </div>
 <div class="col-sm-8 slide-side">
   <h1>SLIDE</h1>
