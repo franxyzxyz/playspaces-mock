@@ -25,6 +25,7 @@
     });
     $("#click-key").on('click',function(e){
       e.preventDefault();
+      $("#show-box").hide()
       $("#hide-box").show()
 
     })
@@ -66,26 +67,110 @@
     }
   })
 </script>
-<div class="col-sm-4">
+<div class="col-sm-12">
 <div class="display">
     <div class="container">
       <div class="screen">
       <!-- TOP-SEARCH -->
-        <p style="font-size:25px" class="text-center title">PlaySpace</p>
-        <div id="tagcontainer" style="height:50px">
-            <input type="text" id="searcharea" placeholder="Search for Playspaces">
-            <a class="icon ion-search" href="/" id="click-key"></a>
+
+        <div style="background:rgba(100,50,80,0.8);padding-bottom:15px">
+          <p style="font-size:25px" class="text-center title">PlaySpace</p>
+          <div id="tagcontainer" style="height:50px">
+              <input type="text" id="searcharea" placeholder="Search for Playspaces">
+              <a class="icon ion-search" href="/" id="click-key"></a>
+          </div>
         </div>
+
         <!-- CONTENT -->
-        <div class="list-box" style="margin-top:20px" id="hide-box" >
+        <div class="list-box" style="margin-top:20px" id="show-box">
+          <p style="padding-left:10px"><b>You last searched...</b></p>
+          <table class="table table-hover" >
+            <tr>
+              <td>Makerbay</td>
+            </tr>
+            <tr>
+              <td>Hong Kong Park</td>
+            </tr>
+            <tr>
+              <td>Ocean Park</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+          </table>
+        </div>
+        <div class="list-box" style="margin-top:10px" id="hide-box" >
           <div class="col-sm-12 text-center">
-          <p>results that match:<br/>'swing' and 'central'</p>
-              <div class="col-sm-6 list-ing text-left" style="background:white;width:40%;margin:5px;padding:1px 1px 3px 1px;border-radius:5px;border:2px solid gray;display:inline-block">
+          <div class="text-left" style="line-height:100%;margin-bottom:20px">
+            <p>Showing <code>5</code> results that match</p><p><span class="cat_tag">swing</span><span class="cat_tag">central</span></p>
+          </div>
+<!--               <div class="col-sm-6 list-ing text-left" style="background:white;width:40%;margin:5px;padding:1px 1px 3px 1px;border-radius:5px;border:2px solid gray;display:inline-block">
                 <img src="../img/hongkongpark.jpg" style="height:70px">
                 <b style="font-size:13px">Hong Kong Park</b><br/>
                 <span style="background:gray;padding:2px;color:white"><i class="icon ion-heart"></i> plants</span>
+              </div> -->
+
+              <div class="col-sm-12" style="padding:0px;margin:0px">
+                <div class="col-sm-4 padding-right:10px">
+                  <img src="../img/park1.png" style="width:70px;" class="thumb">
+                </div>
+                <div class="col-sm-8 text-left" style="line-height:100%">
+                  <p style="font-size:15px"><b>Hong Kong Park</b></p>
+                  <p ><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star-half"></i><br/><a href="#" style="color:black">(5 reviews)</a></p>
+                </div>
               </div>
-            <div class="col-sm-6 text-left" style="background:white;width:40%;margin:5px;padding:1px 1px 3px 1px;border-radius:5px;border:2px solid gray;display:inline-block">
+              <div class="col-sm-12" style="padding:0px;margin:0px">
+                <div class="col-sm-4 padding-right:10px">
+                  <img src="../img/park2.png" style="width:70px;" class="thumb">
+                </div>
+                <div class="col-sm-8 text-left" style="line-height:100%">
+                  <p style="font-size:15px"><b>General Assembly Park</b></p>
+                  <p ><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star-half"></i><br/><a href="#" style="color:black">(5 reviews)</a></p>
+                </div>
+              </div>
+              <div class="col-sm-12" style="padding:0px;margin:0px">
+                <div class="col-sm-4 padding-right:10px">
+                  <img src="../img/park3.png" style="width:70px;" class="thumb">
+                </div>
+                <div class="col-sm-8 text-left" style="line-height:100%">
+                  <p style="font-size:15px"><b>History Park</b></p>
+                  <p ><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star-half"></i><br/><a href="#" style="color:black">(5 reviews)</a></p>
+                </div>
+              </div>
+              <div class="col-sm-12" style="padding:0px;margin:0px">
+                <div class="col-sm-4 padding-right:10px">
+                  <img src="../img/park4.png" style="width:70px;" class="thumb">
+                </div>
+                <div class="col-sm-8 text-left" style="line-height:100%">
+                  <p style="font-size:15px"><b>Hong Long Estate Park</b></p>
+                  <p ><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star-half"></i><br/><a href="#" style="color:black">(5 reviews)</a></p>
+                </div>
+              </div>
+              <div class="col-sm-12" style="padding:0px;margin:0px">
+                <div class="col-sm-4 padding-right:10px">
+                  <img src="../img/park5.png" style="width:70px;" class="thumb">
+                </div>
+                <div class="col-sm-8 text-left" style="line-height:100%">
+                  <p style="font-size:15px"><b>Great Park</b></p>
+                  <p ><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star-half"></i><br/><a href="#" style="color:black">(5 reviews)</a></p>
+                </div>
+              </div>
+<!--             <div class="col-sm-6 text-left" style="background:white;width:40%;margin:5px;padding:1px 1px 3px 1px;border-radius:5px;border:2px solid gray;display:inline-block">
               <img src="../img/makerbay.jpg" style="height:70px">
               <b style="font-size:13px">MakerBay</b>
               <br/><span style="background:gray;padding:2px;color:white"><i class="icon ion-hammer"></i> robot class</span>
@@ -111,22 +196,25 @@
               <b style="font-size:13px">MakerBay</b>
               <br/><span style="background:gray;padding:2px;color:white"><i class="icon ion-hammer"></i> robot class</span>
             </div>
-
+ -->
           </div>
         </div>
 
       </div>
 
       <!-- NAVBAR -->
-      <div class="nav-bar">
-        <a href="/" class="icon ion-ios-home custom-icon" style="font-size:40px;margin:0px 70px 0px 0px"></a>
-        <a class="icon ion-ios-camera custom-icon" style="font-size:40px;margin:0px 70px 0px 0px" href="/user/pip"></a>
-        <a class="icon ion-heart custom-icon" style="font-size:40px;margin:0px 0px 0px 0px" href="/user/pip"></a>
+      <div class="nav-bar text-center">
+        <a href="/" class="icon ion-ios-home custom-icon" style="font-size:40px;margin:0px 30px 0px 0px"></a>
+        <a class="icon ion-search custom-icon" style="font-size:40px;margin:0px 30px 0px 0px" href="/keyword"></a>
+
+        <a class="icon ion-heart custom-icon" style="font-size:40px;margin:0px 30px 0px 0px" href="/user/pip"></a>
+        <a class="icon ion-ios-bookmarks custom-icon" style="font-size:40px;margin:0px 0px 0px 0px" href="/user/pip"></a>
       </div>
+
 
     </div>
   </div>
 </div>
-<div class="col-sm-8 slide-side">
+<!-- <div class="col-sm-8 slide-side">
   <h1>SLIDE</h1>
-</div>
+</div> -->

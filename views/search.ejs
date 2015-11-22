@@ -54,34 +54,36 @@
     }
   })
 </script>
-<div class="col-sm-4">
+<div class="col-sm-12">
 <div class="display">
     <div class="container">
       <div class="screen">
       <!-- TOP-SEARCH -->
-        <p style="font-size:25px" class="text-center title">PlaySpace</p>
-        <div id="tagcontainer" style="height:50px">
-            <input type="text" id="searcharea" placeholder="Search for Playspaces">
-            <a class="icon ion-search" href="/search"></a>
-        </div>
+        <div style="background:rgba(100,50,80,0.8);padding-bottom:0px">
+            <p style="font-size:25px" class="text-center title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PlaySpace&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="icon ion-search" href="/keyword" style="color:white"></a></p>
+
+<!--           <div id="tagcontainer" style="height:50px">
+              <input type="text" id="searcharea" placeholder="Search for Playspaces">
+              <a class="icon ion-search" href="/search"></a>
+          </div>
+ -->        </div>
         <!-- CONTENT -->
-        <div class="list-box" style="margin-top:20px">
-        <div class="col-sm-5">
+        <div class="list-box" style="margin-top:10px">
+        <div class="col-sm-5" style="vertical-align:bottom">
             <p style="font-size:20px"><b>MakerBay</b></p>
         </div>
         <div class="col-sm-7 text-right">
           <span class="icon ion-ios-heart-outline text-right" style="font-size:30px;color:black" id="link-heart"></span>
           <span class="icon ion-ios-bookmarks-outline text-right" style="font-size:30px;color:black" id="link-bookmark"></span>
 
-
         </div>
           <div class="col-sm-6">
-            <span class="icon ion-settings" style="font-size:20px"></span>
-            <span style="padding:2px; background:#666666;color:white;border-radius:5px"><b>5-12</b></span>
+            <!-- <span class="icon ion-settings" style="font-size:20px"></span> -->
+            <span style="padding:2px 5px; background:#666666;color:white;border-radius:5px"><b>Age: 6-12</b></span>
             <div class="info">
                 <span><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i></span>
                 <br/><span><i class="icon ion-ios-telephone"></i>      8192 8167</span>
-                <br/><a href="#">5 reviews</a>
+                <br/><a href="#review">5 reviews</a>
             </div>
 
           </div>
@@ -94,6 +96,14 @@
             Yau Tong Industrial Building Block 2, <br/>Sze Shan St, Yau Tong</a>
           </div>
         </div>
+
+        <div class="col-sm-12" style="display:inline;">
+          <img src="../img/maker-1.jpg" alt="" class="img-thumbnail" style="width:70px;height:70px;margin-right:10px">
+          <img src="../img/maker-2.png" alt="" class="img-thumbnail" style="width:70px;height:70px;margin-right:10px">
+          <img src="../img/maker-3.png" alt="" class="img-thumbnail" style="width:70px;height:70px;margin-right:10px">
+        </div>
+
+
         <div class="col-sm-12" style="background:#cccccc;padding-top:3px;margin-top:10px">
           <b>People also like...</b>
         </div>
@@ -111,29 +121,29 @@
                <i class="icon ion-ios-football" style="font-size:40px"></i>
              </div>
              <div class="col-sm-12">
-               <span style="font-size:12px;">Chelsea<br/>FootBall</span>
+               <span style="font-size:12px;">Sai Kung<br/>Park</span>
              </div>
            </div>
            <div class="scroll-box text-center" style="height:75px;width:70px;line-height:80%;display:inline-block;background:rgba(255,255,255,0.5);border-radius:3px">
              <div class="col-sm-12">
-               <i class="icon ion-ios-football" style="font-size:40px"></i>
+               <i class="icon ion-ios-tennisball-outline" style="font-size:40px"></i>
              </div>
              <div class="col-sm-12">
-               <span style="font-size:12px;">Chelsea<br/>FootBall</span>
+               <span style="font-size:12px;">Shatin<br/>Park</span>
              </div>
            </div>
            <div class="scroll-box text-center" style="height:75px;width:70px;line-height:80%;display:inline-block;background:rgba(255,255,255,0.5);border-radius:3px">
              <div class="col-sm-12">
-               <i class="icon ion-ios-football" style="font-size:40px"></i>
+               <i class="icon ion-gear-b" style="font-size:40px"></i>
              </div>
              <div class="col-sm-12">
-               <span style="font-size:12px;">Chelsea<br/>FootBall</span>
+               <span style="font-size:12px;">Robot<br/>Camp</span>
              </div>
            </div>
         </div>
 
         <div class="col-sm-12" style="margin-top:20px;line-height:130%">
-          <div class="col-sm-4" style="display:inline">
+          <div class="col-sm-4" style="display:inline" id="review">
             <span><b>Reivews</b></span>
           </div>
           <div class="col-sm-8 text-right">
@@ -146,15 +156,18 @@
       </div>
 
       <!-- NAVBAR -->
-      <div class="nav-bar">
-        <a href="/" class="icon ion-ios-home custom-icon" style="font-size:40px;margin:0px 70px 0px 0px"></a>
-        <a class="icon ion-ios-camera custom-icon" style="font-size:40px;margin:0px 70px 0px 0px" href="/user/pip"></a>
-        <a class="icon ion-heart custom-icon" style="font-size:40px;margin:0px 0px 0px 0px" href="/user/pip"></a>
+      <div class="nav-bar text-center">
+        <a href="/" class="icon ion-ios-home custom-icon" style="font-size:40px;margin:0px 30px 0px 0px"></a>
+        <a class="icon ion-search custom-icon" style="font-size:40px;margin:0px 30px 0px 0px" href="/keyword"></a>
+
+        <a class="icon ion-heart custom-icon" style="font-size:40px;margin:0px 30px 0px 0px" href="/user/pip"></a>
+        <a class="icon ion-ios-bookmarks custom-icon" style="font-size:40px;margin:0px 0px 0px 0px" href="/user/pip"></a>
       </div>
+
 
     </div>
   </div>
 </div>
-<div class="col-sm-8 slide-side">
+<!-- <div class="col-sm-8 slide-side">
   <h1>SLIDE</h1>
-</div>
+</div> -->
