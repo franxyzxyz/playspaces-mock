@@ -40,10 +40,12 @@
 <div class="display">
     <div class="container">
       <div class="screen">
-        <p style="font-size:25px" class="text-center title">PlaySpace</p>
-        <div id="tagcontainer" style="height:50px">
-            <input type="text" id="searcharea" placeholder="Search for Playspaces">
-            <a class="icon ion-search" href="/search"></a>
+        <div style="background:rgba(100,50,80,0.8);padding-bottom:15px">
+          <p style="font-size:25px" class="text-center title">PlaySpace</p>
+          <div id="tagcontainer" style="height:50px">
+              <input type="text" id="searcharea" placeholder="Search for Playspaces">
+              <a class="icon ion-search" href="/search"></a>
+          </div>
         </div>
      <!--    <div style="position:absolute;top:180px;left:105px;background:rgba(255,255,255,0.9);width:268px;border:0px solid #ccc;z-index:2" id="hov-list">
           <table class="table table-hover">
@@ -58,24 +60,28 @@
             </tr>
           </table>
         </div> -->
-        <div class="list-box" style="background:url('../img/hongkongpark.jpg') center;height:170px;padding:15px 0px;margin-top:20px">
-          <div class="col-sm-5">
-            <b style="background:rgba(255,255,255,0.7);font-size:30px;padding:5px 15px;border-radius:30px;" class="icon ion-trophy"></b>
-          </div>
-          <div class="col-sm-7 text-right">
-            <!-- <span class="rating">4.5</span> -->
-            <span><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star-half"></i></span>
-            <br/>
-            <span class="icon ion-ios-heart-outline text-right" style="font-size:30px;color:white" id="link-heart"> </span>
-          </div>
+        <div class="list-box" style="background:url('../img/hongkongpark2.jpg') center no-repeat;height:170px;padding:0px 0px 0px 0px;margin-top:0px;">
           <div class="col-sm-12" style="margin-top:0px">
-            <p style="font-size:25px;text-shadow: 0 0 0.2em #fff, 0 0 0.2em #fff"><b>Hong Kong Park</b></p>
+            <div class="col-sm-9 text-left">
+              <p style="font-size:25px;text-shadow: 0 0 0.2em #fff, 0 0 0.2em #fff"><b>Hong Kong Park</b></p>
+            </div>
+            <div class="col-sm-3 text-right">
+              <img src="../img/central.png" style="width:65px;"alt="">
+            </div>
           </div>
-          <div class="col-sm-12">
-            <a style="font-size:15px;" class="location-tag" href="/location/hong-kong-park"><i class="icon ion-ios-location-outline"></i> Central</a>
+          <div class="col-sm-12 text-left">
+            <!-- <span class="rating">4.5</span> -->
+            <div >
+              <span style="background:rgba(255,255,255,0.8);padding:2px 5px"><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star-half"></i>   <a href="#" style="color:black">(5 reviews)</a></span>
+            </div>
+            <br/>
+<!--             <span class="icon ion-ios-heart-outline text-right" style="font-size:30px;color:white" id="link-heart"> </span> -->
+          </div>
+          <div class="col-sm-12" style="padding-top: 18px">
+            <!-- <a style="font-size:15px;" class="location-tag" href="/location/hong-kong-park"><i class="icon ion-ios-location-outline"></i> Central</a> -->
           </div>
         </div>
-        <p style="padding:0px 10px; margin-left:5px;margin-top:10px; font-size:20px;color:rgba(100,50,80,0.8)"><b><i class="icon ion-ios-location"></i>    Near You...</b></p>
+        <p style="padding:0px 10px; margin: 5px 0px 0px 5px; font-size:18px;color:rgba(100,50,80,0.8)"><b><i class="icon ion-paper-airplane"></i>    Near You Now</b></p>
         <ul>
 
         <% seedLocation.forEach(function(elem){ %>
@@ -84,8 +90,9 @@
         </ul>
       </div>
       <div class="nav-bar">
-        <a href="/" class="icon ion-ios-home" style="font-size:40px;margin:0px 20px 0px 0px"></a>
-        <a class="icon ion-heart" style="font-size:40px;margin:0px 20px 0px 0px" href="/user/pip"></a>
+        <a href="/" class="icon ion-ios-home custom-icon" style="font-size:40px;margin:0px 70px 0px 0px"></a>
+        <a class="icon ion-ios-camera custom-icon" style="font-size:40px;margin:0px 70px 0px 0px" href="/user/pip"></a>
+        <a class="icon ion-heart custom-icon" style="font-size:40px;margin:0px 0px 0px 0px" href="/user/pip"></a>
       </div>
 
     </div>
